@@ -13,7 +13,6 @@ export class AuthController {
 
   @MessagePattern('auth_login')
   async login(data: { email: string; password: string }) {
-    console.log(data);
     return this.authService.login(data.email, data.password);
   }
 }
